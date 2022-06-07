@@ -12,7 +12,8 @@
     "vue": "^2.6.14",
     "vue-meta": "^2.4.0",
     "vue-router": "^3.5.1",
-    "vue-share-social": "^0.3.2"
+    "vue-share-social": "^0.3.2",
+    "vue-socialmedia-share": "^1.0.1"
   },
   "devDependencies": {
     "@babel/core": "^7.12.16",
