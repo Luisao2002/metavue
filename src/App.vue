@@ -6,13 +6,33 @@
       <router-link to="/events">Events</router-link>
     </nav>
     <router-view/>
-    <ShareFacebook url="http://recruit.istyle.co.jp/career/"/>
+    <!--<ShareFacebook url="http://recruit.istyle.co.jp/career/"/>
     <ShareTwitter url="http://recruit.istyle.co.jp/career/"/>
-    <ShareGooglePlus url="http://recruit.istyle.co.jp/career/"/>
+    <ShareGooglePlus url="http://recruit.istyle.co.jp/career/"/>-->
+    <facebook :url="url" scale="3"></facebook>
+    <twitter :url="url" title="Check me on Github" scale="3"></twitter>
+    <linkedin :url="url" scale="3"></linkedin>
+    <telegram :url="url" scale="3"></telegram>
+    <whats-app :url="url" title="Hello" scale="3"></whats-app>
+    <pinterest :url="url" scale="3"></pinterest>
+    <reddit :url="url" scale="3" title="My Github"></reddit>
+    <google :url="url" scale="3"></google>
+    <email :url="url" subject="Hello" scale="3"></email>
   </div>
 </template>
 <script async defer crossorigin="anonymous" src="https://connect.facebook.net/pt_PT/sdk.js#xfbml=1&version=v13.0" nonce="c2NF4RYI"></script>
 <script>
+import {
+  Facebook,
+  Twitter,
+  Linkedin,
+  Pinterest,
+  Reddit,
+  Telegram,
+  WhatsApp,
+  Email,
+  Google
+} from "vue-socialmedia-share";
 export default {
   name: 'App',
   metaInfo: {
@@ -29,6 +49,22 @@ meta: [
       {property: 'twitter:description', content:'We are IrRADIARE Science for Evolution! We are a multidisciplinary, multicultural, team, dealing with urban, local and regional governance and public policies.', vmid: 'twitter:description'},
       {property: 'twitter:image', content:'https://www.irradiare.com/com.irradiare.www/images/logo_irradiare_2020.png', template: chunk => `${chunk} - My page`, vmid: 'twitter:images'}
   ]
+  },
+  components: {
+    Facebook,
+    Twitter,
+    Linkedin,
+    Pinterest,
+    Reddit,
+    Telegram,
+    WhatsApp,
+    Email,
+    Google
+  },
+  data() {
+    return {
+      url: "https://www.irradiare.com/"
+    };
   }
 }
 </script>
