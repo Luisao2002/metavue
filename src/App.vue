@@ -15,10 +15,6 @@
     <linkedin :url="url" scale="3"></linkedin>
     <telegram :url="url" scale="3"></telegram>
     <whats-app :url="url" title="Hello" scale="3"></whats-app>
-    <pinterest :url="url" scale="3"></pinterest>
-    <reddit :url="url" scale="3" title="My Github"></reddit>
-    <google :url="url" scale="3"></google>
-    <email :url="url" subject="Hello" scale="3"></email>
     </div>
   </div>
 </template>
