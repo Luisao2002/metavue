@@ -9,6 +9,7 @@
     <!--<ShareFacebook url="http://recruit.istyle.co.jp/career/"/>
     <ShareTwitter url="http://recruit.istyle.co.jp/career/"/>
     <ShareGooglePlus url="http://recruit.istyle.co.jp/career/"/>-->
+    <div class="pad">
     <facebook :url="url" scale="3"></facebook>
     <twitter :url="url" title="Check me on Github" scale="3"></twitter>
     <linkedin :url="url" scale="3"></linkedin>
@@ -18,6 +19,7 @@
     <reddit :url="url" scale="3" title="My Github"></reddit>
     <google :url="url" scale="3"></google>
     <email :url="url" subject="Hello" scale="3"></email>
+    </div>
   </div>
 </template>
 <script async defer crossorigin="anonymous" src="https://connect.facebook.net/pt_PT/sdk.js#xfbml=1&version=v13.0" nonce="c2NF4RYI"></script>
@@ -70,7 +72,11 @@ meta: [
 </script>
 
 <style>
-#app {
+.pad > span{
+padding: 3px;
+}
+
+#app{
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
