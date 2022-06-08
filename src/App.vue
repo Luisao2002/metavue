@@ -9,13 +9,13 @@
     <!--<ShareFacebook url="http://recruit.istyle.co.jp/career/"/>
     <ShareTwitter url="http://recruit.istyle.co.jp/career/"/>
     <ShareGooglePlus url="http://recruit.istyle.co.jp/career/"/>-->
-    <div class="pad">
-    <facebook :url="url" scale="3"></facebook>
-    <twitter :url="url" title="Check me on Github" scale="3"></twitter>
-    <linkedin :url="url" scale="3"></linkedin>
-    <telegram :url="url" scale="3"></telegram>
-    <whats-app :url="url" title="Hello" scale="3"></whats-app>
-    </div>
+    <footer id="footer">
+      <p>Partilhe aqui os conteúdos do website:</p>
+    <facebook :url="url" scale="3" class="pointer"></facebook>
+    <twitter :url="url" title="Check me on Github" scale="3" class="pointer"></twitter>
+    <linkedin :url="url" scale="3" class="pointer"></linkedin>
+    <telegram :url="url" scale="3" class="pointer"></telegram>
+    <whats-app :url="url" title="Hello" scale="3" class="pointer"></whats-app></footer>
   </div>
 </template>
 <script async defer crossorigin="anonymous" src="https://connect.facebook.net/pt_PT/sdk.js#xfbml=1&version=v13.0" nonce="c2NF4RYI"></script>
@@ -68,7 +68,16 @@ meta: [
 </script>
 
 <style>
-.pad > span{
+.pointer {cursor: pointer;}
+
+#footer {
+  position: absolute;
+  bottom: 30;
+  width: 99%;
+  height: 2.5rem;            /* Footer height */
+}
+
+#footer > span{
 padding: 3px;
 }
 
