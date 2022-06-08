@@ -72,9 +72,9 @@ meta: [
 
 #footer {
   position: absolute;
-  bottom: 30;
+  bottom: 0;
   width: 99%;
-  height: 2.5rem;            /* Footer height */
+ /* height: 2.5rem;*/            /* Footer height */
 }
 
 #footer > span{
