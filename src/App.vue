@@ -15,7 +15,8 @@
     <twitter :url="url" title="Check me on Github" scale="3" class="pointer"></twitter>
     <linkedin :url="url" scale="3" class="pointer"></linkedin>
     <telegram :url="url" scale="3" class="pointer"></telegram>
-    <whats-app :url="url" title="Hello" scale="3" class="pointer"></whats-app></footer>
+    <whats-app :url="url" title="Hello" scale="3" class="pointer"></whats-app>
+    </footer>
   </div>
 </template>
 <script async defer crossorigin="anonymous" src="https://connect.facebook.net/pt_PT/sdk.js#xfbml=1&version=v13.0" nonce="c2NF4RYI"></script>
@@ -61,7 +62,7 @@ meta: [
   },
   data() {
     return {
-      url: "https://www.irradiare.com/"
+      url: "https://teste-meta-tags.000webhostapp.com/"
     };
   }
 }
