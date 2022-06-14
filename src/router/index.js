@@ -3,7 +3,6 @@ import VueRouter from 'vue-router'
 import HomeView from '../views/HomeView.vue'
 import VueMeta from 'vue-meta'
 import VueShareSocial from 'vue-share-social'
-//import { nextTick } from 'vue/types/umd'
 
 Vue.use(VueRouter)
 Vue.use(VueMeta), {
