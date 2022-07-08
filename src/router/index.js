@@ -3,6 +3,12 @@ import VueRouter from 'vue-router'
 import HomeView from '../views/HomeView.vue'
 import VueMeta from 'vue-meta'
 import VueShareSocial from 'vue-share-social'
+import axios from 'axios';
+
+axios.get('http://localhost:1337/restaurants').then(response => {
+  console.log(response);
+});
+
 
 Vue.use(VueRouter)
 Vue.use(VueMeta), {

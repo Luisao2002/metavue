@@ -9,6 +9,15 @@
     <!--<ShareFacebook url="http://recruit.istyle.co.jp/career/"/>
     <ShareTwitter url="http://recruit.istyle.co.jp/career/"/>
     <ShareGooglePlus url="http://recruit.istyle.co.jp/career/"/>-->
+<div v-if="error">
+      {{ error }}
+    </div>
+    <ul v-else>
+      <li v-for="restaurant in restaurants" :key="restaurant.id">
+        {{ restaurant.name }} {{restaurant.description}} {{restaurant.categories.name}}
+      </li>
+    </ul>
+    
     <footer id="footer">
       <p>Partilhe aqui os conteúdos do website:</p>
     <facebook :url="url" scale="3" class="pointer"></facebook>
@@ -21,6 +30,7 @@
 </template>
 <script async defer crossorigin="anonymous" src="https://connect.facebook.net/pt_PT/sdk.js#xfbml=1&version=v13.0" nonce="c2NF4RYI"></script>
 <script>
+import axios from 'axios'
 import {
   Facebook,
   Twitter,
@@ -34,6 +44,7 @@ import {
 } from "vue-socialmedia-share";
 export default {
   name: 'App',
+  /*metadata of social media*/
   metaInfo: {
     //title: 'MetaSite',
     //titleTemplate: '%s | vue-meta Example App',
@@ -62,8 +73,18 @@ meta: [
   },
   data() {
     return {
-      url: "https://teste-meta-tags.000webhostapp.com/"
-    };
+      url: "https://teste-meta-tags.000webhostapp.com/",
+      restaurants: [],
+      error: null
+    }
+  },
+  async mounted () {
+    try {
+      const response = await axios.get('http://localhost:1337/restaurants')
+      this.restaurants = response.data
+    } catch (error) {
+      this.error = error;
+    }
   }
 }
 </script>
